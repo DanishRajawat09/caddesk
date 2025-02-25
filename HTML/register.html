@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register caddesk</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body class="registerBody">
+    <div class="registerContainer">
+        <h1 class="registerHeading"><span class="registerHeadingSpan">CADDESK</span> REGISTRATION</h1>
+        <form id="registerForm">
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="registerEmail ">Email</label>
+                    <input class="input-success" type="email" id="registerEmail" placeholder="Enter Your Email">
+                    <p class="error" id="emailError"></p>
+                </div>
+                <div class="userNameContainer emailContainer LoginEmail flex">
+                    <label for="registerUsername">User Name</label>
+                    <input class="input-success" type="text" id="registerUsername" placeholder="Enter Your Username">
+                    <p class="error" id="usernameError"></p>
+                </div>
+            </div>
+
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="registerFullName">Full Name</label>
+                    <input class="input-success" type="text" id="registerFullName" placeholder="Enter Your Full Name">
+                    <p class="error" id="fullNameError"></p>
+                </div>
+                <div class="emailContainer LoginEmail flex">
+                    <label for="registerContact">Contact No</label>
+                    <input class="input-success" type="number" id="registerContact" placeholder="Enter Your Contact No">
+                    <p class="error" id="contactError"></p>
+                </div>
+            </div>
+
+            <div class="emailUserNameContainer flex">
+                <div class="userNameContainer emailContainer LoginEmail flex">
+                    <label for="registerPassword">Password</label>
+                    <input class="input-success" type="password" id="registerPassword" placeholder="Enter Your Password">
+                    <p class="error" id="passwordError"></p>
+                </div>
+                <div class="userNameContainer emailContainer LoginEmail flex">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input class="input-success" type="password" id="confirmPassword" placeholder="Confirm Your Password">
+                    <p class="error" id="confirmPasswordError"></p>
+                </div>
+            </div>
+
+            <div class="emailUserNameContainer">
+                <h2 class="registerGender">Gender</h2>
+                <div class="handleGenderRadio flex">
+                    <div class="maleRadio radio flex">
+                        <input type="radio" name="gender" id="male" value="Male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="maleRadio radio flex">
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="maleRadio radio flex">
+                        <input type="radio" name="gender" id="notToSay" value="Prefer not to say">
+                        <label for="notToSay">Prefer not to say</label>
+                    </div>
+                </div>
+                <p class="error" id="genderError"></p>
+            </div>
+
+            <button type="submit" class="commonBtn">Register</button>
+        </form>
+
+        <div class="line"></div>
+
+        <div class="needSignUpContainer">
+            <p class="needSignUp">Have an account? <a href="studentsLogIn.html">LOG IN</a></p>
+        </div>
+    </div>
+    <script src="../JS/registerFormValidate.js"></script>
+</body>
+</html>

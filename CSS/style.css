@@ -1,0 +1,987 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/***** DEFAULT SETTINGS Section *****/
+/* universal */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+
+}
+
+button {
+  border: none;
+}
+
+/* reuseable */
+
+.flex {
+  display: flex;
+}
+
+
+.commonBtn {
+  color: var(--whit);
+  background-color: var(--comnBtn);
+  border-radius: 10px;
+  padding-inline: 2.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-block: 1.4rem;
+}
+
+.container {
+  max-width: 1260px;
+  margin: auto;
+}
+
+/***** End DEFAULT SETTINGS Section *****/
+
+/* variable */
+
+:root {
+  --Blk: #000;
+  --whit: #fff;
+  --primeFont: "Poppins";
+  --whoRV: #f8f8f8;
+  --comnBtn: red;
+  --lightComnBtn: #d2a98e;
+  --YearClr: #ababab;
+  --midTextClr: #7e7e7e;
+  --smClr: #696969;
+  --nearcntr: #454545;
+  --onlinTbg: #f6f2ed
+}
+
+.line {
+  width: 2px;
+  background-color: white;
+}
+
+/*state*/
+
+.navLinks li:hover {
+  color: var(--comnBtn);
+}
+
+.logIn:hover .logInDropDown {
+  display: block;
+
+}
+
+.logInDropDown:hover {
+
+  display: block;
+}
+
+.courses:hover .coursesList {
+  display: block;
+}
+
+.SideCourses:hover {
+  background-color: var(--comnBtn);
+  color: white;
+}
+.fa-bars:hover{
+color: var(--comnBtn);
+
+}
+.aboutUs:hover .coursesList{
+  display: block;
+}
+.studentCorner:hover .coursesList{
+  display: block;
+}
+/* normal code */
+
+.topBar {
+  background-color: var(--Blk);
+}
+
+.topNavContainer {
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.topNavLeft {
+  padding-block: 1rem;
+  gap: 2rem;
+
+  & a {
+    font-size: 1.6rem;
+    font-family: var(--primeFont);
+    font-weight: 500;
+    color: var(--whit);
+  }
+}
+
+.topNavUl {
+  gap: 2rem;
+  position: relative;
+}
+
+.topNavUl li a {
+  color: var(--whit);
+  font-family: var(--primeFont);
+  font-size: 1.2rem;
+}
+
+.logInDropDown {
+  display: none;
+  position: absolute;
+  top: 16px;
+  z-index: 400;
+  right: -20px;
+}
+
+.studentsLogIn,
+.partnerLogIn {
+  display: block;
+  padding-inline: 1.9rem;
+  padding-block: 1.3rem;
+  background-color: #000;
+  font-size: 1.6rem;
+}
+
+.topNavRight {
+  padding-block: 1rem;
+}
+
+/*main nav */
+
+.mainNavContainer {
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.mainNav {
+  position: sticky;
+  z-index: 100;
+
+}
+
+.navLinks {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLinks li {
+  font-family: var(--primeFont);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.fa-caret-down {
+  margin-left: 0.8rem;
+}
+
+.slides {
+  display: flex;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mainContent {
+  overflow: hidden;
+}
+
+.slide1 img {
+  width: 100%;
+  height: auto;
+}
+
+.coursesList {
+  display: none;
+  padding-block: 2rem;
+  position: absolute;
+  background-color: white;
+}
+
+.coursesLiSpan {
+
+  padding: 1rem 3rem 1rem 1.5rem;
+}
+
+.coursesUl {
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+/***** Side NavBar Section *****/
+.sectionSideNavBar {
+  height: 100vh;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 500;
+  padding-block: 4rem;
+  transform: translate(-100%);
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  -o-transform: translate(-100%);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.fa-bars{
+  font-size: 28px;
+display: none;
+
+}
+
+@media screen and (max-width: 980px) {
+  .fa-bars {
+    display: inline;
+  }
+}
+
+.sideNavBarLogo {
+  width: 100px;
+
+}
+
+.SideNavBarHead {
+  justify-content: space-between;
+  margin-bottom: 7rem;
+  padding-inline: 2rem;
+}
+
+.SideNavBarHead i {
+  font-size: 4rem;
+  color: var(--comnBtn);
+
+}
+
+.sideNavBar {
+  width: 100%;
+}
+
+.sideNavBarUl {
+  width: 100%;
+}
+
+.coursesDiv {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ababab;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-inline: 1rem;
+}
+
+.SideCourses span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: var(--primeFont);
+
+}
+
+.SideCourses i {
+  font-size: 1.6rem;
+}
+
+/***** End Side NavBar Section *****/
+
+/***** INQUIRY Section *****/
+
+.sectionInquiry {
+  background-color: white;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+  padding: 2.5rem 1.7rem;
+  transform: translate(-100%);
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  -o-transform: translate(-100%);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.inquiryHeaderIcon i {
+  font-size: 4rem;
+  color: var(--comnBtn);
+
+}
+
+.inquiryHeaderIcon {
+  justify-content: end;
+  margin-bottom: 3rem;
+}
+
+.inquiryHeading {
+  text-align: center;
+  margin-block: 4rem;
+  margin-inline: 2rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: var(--primeFont);
+}
+
+.inquiryHeadingSpan {
+  color: var(--comnBtn);
+}
+
+.nameInputInquiry {
+  background-color: var(--whoRV);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.NameInput {
+  font-size: 1.6rem;
+  height: 40px;
+  width: 100%;
+  background-color: var(--whoRV);
+  outline: none;
+  border: none;
+}
+
+.InquiryOptions {
+  height: 40px;
+  color: #777;
+  font-size: 1.6rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.submitBtnContainer {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.inquiryLogo {
+  width: 5%;
+
+  position: fixed;
+  top: 0px;
+}
+
+/***** End INQUIRY Section *****/
+
+/*About Cadd Desk start*/
+.sectionAboutCaddDesk {
+  background-color: var(--whoRV);
+}
+
+.sectionAboutCaddDesk .container {
+  padding: 3rem;
+  padding-top: 5rem;
+}
+
+.flexContainerAbout {
+  justify-content: space-between;
+}
+
+.leftContainer {
+  width: 50%;
+}
+
+.aboutHeading {
+  font-size: 4.5rem;
+  font-family: var(--primeFont);
+  word-spacing: 5px;
+
+  margin-bottom: 3.5rem;
+}
+
+.aboutHeadingLogo {
+  color: var(--comnBtn);
+
+}
+
+.aboutUspara {
+  font-family: var(--primeFont);
+
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.aboutParaFirst,
+.aboutParaSecond {
+  margin-bottom: 20px;
+}
+
+.rightContainer {
+  justify-content: center;
+}
+
+.rightContainer img {
+  width: 550px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.aboutBtn {
+  margin-top: 3rem;
+
+}
+
+/*About Cadd Desk end*/
+
+
+/***** CAD DESK DETAILS  Section *****/
+
+.cadDeskDetails {
+  background-color: var(--whit);
+
+}
+
+.cadDeskDetails .container {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block: 3rem;
+}
+
+.detailsLeft {
+  max-width: 50rem;
+}
+
+.detailsRight {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.twenty {
+  font-size: 15rem;
+  font-family: var(--primeFont);
+  color: var(--lightComnBtn);
+
+}
+
+.twentyYearsPara {
+  align-self: center;
+  color: var(--YearClr);
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--primeFont);
+  width: 10rem;
+}
+
+.ourSuccessPara {
+  font-size: 3.8rem;
+  font-weight: 700;
+  font-family: var(--primeFont);
+}
+
+.SSSpan {
+  color: var(--comnBtn);
+}
+
+.fourLakh {
+  color: var(--comnBtn);
+  font-size: 5.6rem;
+  text-align: center;
+}
+
+.detailsRightUpper,
+.detailsRightLower {
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.happyStudnt {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--midTextClr);
+  font-weight: 600;
+  font-family: var(--primeFont);
+}
+
+/***** End CAD DESK DETAILS  Section *****/
+
+/***** trending courses  Section *****/
+.trendingCourses {
+  background-color: var(--whoRV);
+}
+
+.trendingHeader {
+  font-family: var(--primeFont);
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+
+
+}
+
+.trendingHeadCourses {
+  color: var(--comnBtn);
+}
+
+.coursesCard{
+  width: 300px;
+  border-radius:10px ;
+  -webkit-border-radius:10px ;
+  -moz-border-radius:10px ;
+  -ms-border-radius:10px ;
+  -o-border-radius:10px ;
+  overflow: hidden;
+}
+.cardImgContainer img{
+  width: 100%;
+  height: auto;
+}
+.cardData{
+  padding-block:1rem ;
+  padding-inline: 1.7rem;
+  background-color: #eaeaea;
+}
+.cardHeading{
+ text-align: center;
+  font-size: 1.4rem;
+font-family: var(--primeFont);
+margin-bottom: 1.5rem;
+}
+.cardTime{
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  background-color: var(--comnBtn);
+  font-size: 1rem;
+  color: white;
+  font-family: var(--primeFont);
+  padding-left: 7px;
+  padding-right: 14px;
+  padding-block: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.cardHour{
+  justify-content: start;
+}
+.cardHourInCentre .cardHour img{
+margin-right:20px;
+}
+ .cardTime img {
+  width:10px;
+  margin-right: 10px;
+}
+.cardHourInCentre{
+  justify-content: space-evenly;
+}
+.cardPara{
+  margin-top: 1.5rem;
+text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--primeFont);
+  
+}
+.cardparaRedLine{
+display: inline-block;
+width: 2px;
+height: 10px;
+background-color: red;
+}
+.cardData .commonBtn{
+  padding-inline:1rem ;
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  margin-top: 2rem;
+}
+.cardBtn{
+  justify-content: center;
+}
+/***** End trending courses  Section *****/
+
+/***** REVIEW STUDENTS Section *****/
+.reviewStudents {
+  background-color: var(--whoRV);
+
+}
+
+.reviewStudents .container {
+  padding-block: 4rem;
+}
+
+.studentsReviewHeading {
+  font-size: 3rem;
+  font-family: var(--primeFont);
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+
+.cardContainer {
+  gap: 3rem;
+}
+
+.reviewCard {
+  background-color: white;
+  padding: 2rem;
+  width: 400px;
+  height: 340px;
+}
+
+.cardAvatar {
+  justify-content: center;
+
+}
+
+.cardAvatar img {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.reviewStudentsName {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: var(--primeFont);
+  margin-top: 2rem;
+}
+
+.reviewStar {
+  color: #ec8437;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin-block: 1rem;
+}
+
+.reviewPara {
+  margin-block: 1rem;
+  line-height: 1.9;
+
+  font-size: 1.4rem;
+  font-family: var(--primeFont);
+  font-weight: 500;
+  text-align: center;
+}
+
+/***** End REVIEW STUDENTS Section *****/
+
+/***** Find Near Center Section *****/
+.sectionFindNearCenter {
+  background-image: url(../assets/photos/nearCenterImg.png);
+  background-color: var(--nearcntr);
+  background-repeat: no-repeat;
+  background-position: 100% top;
+}
+
+.sectionFindNearCenter .container {
+  padding-block: 8rem;
+}
+
+.nearCenterHeading {
+  font-size: 4rem;
+  color: #fff;
+  font-family: var(--primeFont);
+}
+
+/***** End Find Near Center Section *****/
+/***** online training  Section *****/
+.sectionOnlineTraining {
+  background-image: url(../assets/photos/nearCenterWhite.png);
+  background-color: var(--onlinTbg);
+  background-repeat: no-repeat;
+  background-position: 100% bottom;
+}
+
+.sectionFindNearCenter .container,
+.sectionOnlineTraining .container {
+  padding-block: 8rem;
+}
+
+.onlineTrainingHeading {
+  font-size: 4rem;
+  color: #333333;
+  font-family: var(--primeFont);
+}
+
+.onlinTSubHeading {
+  text-decoration: underline;
+  font-size: 1.4rem;
+  font-family: var(--primeFont);
+}
+
+.onlineTrainingBtn i {
+  margin-right: 1rem;
+}
+
+.btnContainer {
+  width: 53%;
+  justify-content: center;
+}
+
+/***** End online training Section *****/
+
+
+/*****  Franchise opportunities Section *****/
+.headingContainer,
+.btnContainer {
+  width: 50%
+}
+
+.FranchisePara {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: var(--primeFont);
+}
+
+/***** End  Franchise opportunities Section *****/
+
+
+/***** logIn Page Section *****/
+.logInBody {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #c9c9c9;
+}
+
+.logInContainer {
+  background-color: white;
+  padding-inline: 6rem;
+  padding-block: 5rem;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  min-height: 500px;
+  min-width: 500px;
+
+}
+
+.logInHeading {
+  text-align: center;
+
+  font-size: 2.8rem;
+  font-family: var(--primeFont);
+}
+
+.logInHeadingSpan {
+  color: var(--comnBtn);
+}
+
+.LoginEmail {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.LoginEmail,
+.LoginPassword {
+  flex-direction: column;
+
+}
+
+.LoginEmail label,
+.LoginPassword label {
+  font-size: 1.8rem;
+  font-family: var(--primeFont);
+  font-weight: 500;
+}
+
+.LoginEmail input,
+.LoginPassword input {
+  width: 100%;
+  height: 40px;
+  padding-inline: 0.8rem;
+
+  outline: none;
+  font-size: 1.6rem;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.loginBtnContainer {
+  justify-content: center;
+  margin-top: 2.7rem;
+}
+
+.logInContainer .line {
+  min-width: 380px;
+  height: 1px;
+  background-color: black;
+  margin-block: 3rem;
+}
+
+.needSignUp {
+  text-align: center;
+  font-size: 16px;
+}
+
+.needSignUp a {
+  color: red;
+}
+
+/***** End logIn Page Section *****/
+/***** REGISTER PAGE Section *****/
+
+.registerBody {
+  background-color: #c9c9c9;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.registerContainer {
+  background-color: white;
+  padding-inline: 6rem;
+  padding-block: 5rem;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  min-height: 700px;
+  min-width: 800px;
+}
+
+.registerHeading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  font-family: var(--primeFont);
+}
+
+.registerHeadingSpan {
+  color: var(--comnBtn);
+}
+
+.emailUserNameContainer {
+  margin-top: 2.7rem;
+}
+
+.emailContainer {
+  margin: 0;
+  width: 45%;
+  gap: 5px;
+}
+
+.emailUserNameContainer {
+  justify-content: space-between;
+
+}
+
+.registerGender {
+  font-size: 1.8rem;
+  font-family: var(--primeFont);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.radio {
+  gap: 7px;
+  margin-right: 7rem;
+}
+
+.radio label {
+  font-size: 18px;
+  font-family: var(--primeFont);
+  font-weight: 500;
+}
+
+.registerContainer .commonBtn {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.registerContainer .line {
+  background-color: black;
+  width: 100%;
+  height: 1px;
+  margin-top: 2rem;
+}
+
+.error {
+  margin-top: 6px;
+  color: red;
+  font-size: 13px;
+
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.input-success {
+  border: 1px solid #ababab;
+}
+
+/***** End REGISTER PAGE Section *****/
+
+/***** Media Query Section *****/ 
+
+@media screen and (max-width : 980px) {
+  .container{
+    padding-inline:2rem ;
+  }
+  .topBar{
+    display: none;
+  }
+  .navLinks{
+    display: none;
+  }
+  .mainNavContainer {
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+  }
+  .inquiryLogo{
+    width: 10%;
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+  }
+}
+
+/***** End Media Query Section *****/

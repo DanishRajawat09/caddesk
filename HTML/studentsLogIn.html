@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Login</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body class="logInBody">
+
+    <div class="logInContainer">
+        <h1 class="logInHeading">Welcome to <span class="logInHeadingSpan">CADDESK</span></h1>
+        <form id="loginForm">
+            <div class="LoginEmail flex">
+                <label for="Email">Email</label>
+                <input class="input-success"  type="email" id="Email" placeholder="Enter Your Email">
+                <p class="error" id="emailError"></p>
+            </div>
+            <div class="LoginPassword flex">
+                <label for="password">Password</label>
+                <input class="input-success" type="password" id="password" placeholder="Enter Your Password">
+                <p class="error" id="passwordError"></p>
+            </div>
+            <div class="loginBtnContainer flex">
+                <button class="commonBtn" type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="line"></div>
+        <div class="needSignUpContainer">
+            <p class="needSignUp">Need an account? <a href="../HTML/register.html">SIGN UP</a></p>
+        </div>
+    </div>
+<script src="../JS/logInFormValidation.js"></script>
+</body>
+</html>
