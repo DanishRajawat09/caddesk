@@ -33,7 +33,9 @@ button {
 .flex {
   display: flex;
 }
-
+.grid{
+  display: grid;
+}
 
 .commonBtn {
   color: var(--whit);
@@ -566,6 +568,7 @@ display: none;
   -ms-border-radius:10px ;
   -o-border-radius:10px ;
   overflow: hidden;
+box-shadow: 0px 0px 1px 0px ;
 }
 .cardImgContainer img{
   width: 100%;
@@ -574,7 +577,7 @@ display: none;
 .cardData{
   padding-block:1rem ;
   padding-inline: 1.7rem;
-  background-color: #eaeaea;
+
 }
 .cardHeading{
  text-align: center;
@@ -985,3 +988,88 @@ background-color: red;
 }
 
 /***** End Media Query Section *****/
+
+/***** WORLD CLASS Section *****/ 
+.worldClassContainer{
+  padding-block: 4.5rem;
+}
+.worldClassContent{
+  margin-block: 5rem;
+}
+
+.twoMillionContainer{
+  padding-inline: 4rem;
+  border-right: 2px solid var(--comnBtn);
+}
+.twoMHeading{
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: var(--primeFont);
+  color: var(--comnBtn);
+  text-align: center;
+}
+.twoMpara{
+  font-size: 2rem;
+  font-family: var(--primeFont);
+  color: #868686;
+  text-align: center;
+
+}
+.lastTwoM{
+  border: none;
+}
+/***** End WORLD CLASS Section *****/
+
+/***** DIVISION Section *****/ 
+
+.sectiondivision{
+  background-color: var(--whoRV);
+}
+.sectiondivision .container{
+  padding-block: 5rem;
+}
+.divisionCard{
+  max-width: 400px;
+  
+}
+/***** End DIVISION Section *****/
+
+/***** Footer Section *****/ 
+.sectionFooter{
+  padding-block: 4rem;
+background-color: var(--whoRV);
+}
+.addressHeader{
+  color: var(--comnBtn);
+  font-size: 2rem;
+  font-family: var(--primeFont);
+  margin-bottom: 1rem;
+}
+.addressPara{
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--primeFont);
+}
+.gridContainer{
+  grid-template-columns: repeat(4 , minmax(250px , 300px));
+justify-items: center;
+}
+
+.addressFooterImg{
+  width: 180px;
+}
+.coursesHeader{
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-family: var(--primeFont);
+  color: var(--comnBtn);
+}
+.coursesLi{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-family: var(--primeFont);
+}
+.footerBottom{
+  margin-block: 3rem;
+}
+/***** End Footer Section *****/
