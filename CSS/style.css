@@ -12,6 +12,16 @@
 html {
   font-size: 62.5%;
 }
+@media screen and (width < 1080px) {
+  html {
+    font-size:   56.25%;
+  }
+}
+@media screen and (width < 700px) {
+  html {
+    font-size:   50%;
+  }
+}
 
 a {
   text-decoration: none;
@@ -415,6 +425,7 @@ display: none;
 
 .flexContainerAbout {
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .leftContainer {
@@ -466,6 +477,28 @@ display: none;
 }
 
 /*About Cadd Desk end*/
+/***** MEDIA QUERY ABOUT Section *****/ 
+
+@media screen and (width < 1080px) {
+  
+.leftContainer {
+  width: 100%;
+}
+.rightContainer img {
+width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.flexContainerAbout {
+
+  gap: 3rem;
+}
+}
+
+/***** End MEDIA QUERY ABOUT Section *****/
 
 
 /***** CAD DESK DETAILS  Section *****/
@@ -546,13 +579,16 @@ display: none;
 .trendingCourses {
   background-color: var(--whoRV);
 }
+.trendingCourses .container{
+  padding-inline: 3rem;
+}
 
 .trendingHeader {
   font-family: var(--primeFont);
   text-align: center;
   font-size: 3.2rem;
   font-weight: 700;
-
+margin-bottom: 3rem;
 
 }
 
@@ -658,7 +694,10 @@ background-color: red;
 }
 
 .cardContainer {
+grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  grid-auto-flow: column;
+  overflow: hidden;
 }
 
 .reviewCard {
@@ -995,6 +1034,7 @@ background-color: red;
 }
 .worldClassContent{
   margin-block: 5rem;
+  grid-template-columns: repeat(4 , 1fr);
 }
 
 .twoMillionContainer{
@@ -1019,6 +1059,19 @@ background-color: red;
   border: none;
 }
 /***** End WORLD CLASS Section *****/
+/*****MEDIA QUERY  WORLD CLASS Section *****/ 
+
+@media screen and (width < 1080px) {
+  .worldClassContent{
+
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .lastTwoM{
+    border-right: 2px solid var(--comnBtn);
+  }
+}
+
+/***** EndMEDIA QUERY  WORLD CLASS Section *****/
 
 /***** DIVISION Section *****/ 
 
@@ -1073,3 +1126,24 @@ justify-items: center;
   margin-block: 3rem;
 }
 /***** End Footer Section *****/
+
+@media screen and (width < 1080px) {
+  .gridContainer{
+    grid-template-columns: repeat(2 , minmax(250px , 400px));
+    row-gap: 2rem;
+  justify-items: center;
+  }
+  .addressHeader{
+    color: var(--comnBtn);
+    font-size: 2rem;
+    font-family: var(--primeFont);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .addressPara{
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    font-family: var(--primeFont);
+    text-align: center;
+  }
+}
