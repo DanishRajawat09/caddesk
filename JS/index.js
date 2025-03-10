@@ -50,3 +50,4 @@ navBarCancel.addEventListener("click" , () => {
 )
 
 // Side Navbar end
+

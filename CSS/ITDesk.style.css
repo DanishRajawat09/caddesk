@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+html {
+    font-size: 62.5%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+  }
+  
+  ul {
+    list-style: none;
+  
+  }
+  
+  button {
+    border: none;
+  }
+  
+  :root {
+--topNvBrClr :#b3b3b3;
+--mainNavBckClr : #808080c7;
+--white : #fff;
+--comnBtn: red;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  .grid{
+    display: grid;
+  }
+  .topNavIcons{
+    color: var(--topNvBrClr);
+    font-size: 1.4rem;
+    
+  }
+
+/***** IT DESK TOPNAVBAR Section *****/ 
+
+.topNavBar{
+    background-color: black;
+
+}
+
+.container {
+    max-width: 1260px;
+    margin: auto;
+  }
+  .topNavBar .container{
+    justify-content: space-between;
+    padding-block: 1.5rem;
+  }
+  .topNavBarNumber{
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+  .topNavBarNumber a{
+    font-size: 1.4rem;
+    color: var(--topNvBrClr);
+
+
+  }
+  .TopNavBarLeft ul{
+align-items: center;
+  }
+  .TopNavBarIconsPadding{
+    padding-inline: 1.5rem;
+    border-inline: 1px solid var(--topNvBrClr);
+    font-size: 1.7rem;
+  }
+  .TopNavBarRightUl li{
+
+padding-inline: 1.5rem;
+    border-inline: 1px solid var(--topNvBrClr);
+   
+  }
+  .TopNavBarRightUl a{
+    color: var(--topNvBrClr);
+    font-size: 1.4rem;
+  }
+  .mainNavBar{
+    background-color: var(--mainNavBckClr);
+  }
+  .mainNavBar .container{
+    padding-block: 2rem; 
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ItDeksLogo{
+    width: 126px;
+  }
+  .mainNavUl{
+gap: 2.5rem;
+  }
+  .mainNavUl a {
+    font-size: 1.7rem;
+    color: var(--white);
+    font-weight: 600;
+  }
+  .fa-caret-down{
+    margin-left: 10px;
+  }
+/***** End IT DESK TOPNAVBAR Section *****/
+
+/***** MAIN SLIDER Section *****/ 
+
+.slidesIt {
+  display: flex;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideIt {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mainContent {
+  overflow: hidden;
+}
+
+.slide1 img {
+  width: 100%;
+  height: auto;
+}
+
+/***** End MAIN SLIDER Section *****/
+
+/***** IT ABOUT US Section *****/ 
+.sectionAboutItDesk .container{
+  padding-block: 4.5rem;
+}
+.aboutItHeading span{
+font-size: 4.2rem;
+font-weight: 600;
+border-bottom: 2px solid var(--comnBtn);
+}
+
+/***** End IT ABOUT US Section *****/
