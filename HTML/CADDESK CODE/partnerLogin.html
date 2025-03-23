@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Login | CADDESK</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body class="logInBody partnerLoginBody">
+
+    <div class="logInContainer partnerLoginContainer">
+        <h1 class="logInHeading">Partner <span class="logInHeadingSpan">Portal</span></h1>
+        <form id="partnerLoginForm">
+            <div class="LoginEmail flex">
+                <label for="Email">Business Email</label>
+                <input class="input-success" type="email" id="Email" placeholder="Enter Business Email">
+                <p class="error" id="emailError"></p>
+            </div>
+            <div class="LoginPassword flex">
+                <label for="password">Password</label>
+                <input class="input-success" type="password" id="password" placeholder="Enter Your Password">
+                <p class="error" id="passwordError"></p>
+            </div>
+            <div class="forgotPasswordContainer">
+                <a href="#" class="forgotPassword">Forgot Password?</a>
+            </div>
+            <div class="loginBtnContainer flex">
+                <button class="commonBtn partnerBtn" type="submit">Partner Login</button>
+            </div>
+        </form>
+        <div class="line"></div>
+        <div class="needSignUpContainer">
+            <p class="needSignUp">New Partner? <a href="partnerRegister.html">APPLY NOW</a></p>
+        </div>
+        <div class="backToHomeContainer">
+            <p class="backToHome">Back to <a href="index.html">Home Page</a></p>
+        </div>
+    </div>
+<script src="../../JS/partnerLoginValidation.js"></script>
+</body>
+</html> 

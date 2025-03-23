@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Registration | CADDESK</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body class="registerBody partnerRegisterBody">
+    <div class="registerContainer partnerRegisterContainer">
+        <h1 class="registerHeading">Partner <span class="registerHeadingSpan">Registration</span></h1>
+        <form id="partnerRegisterForm">
+            <!-- Business Details Section -->
+            <h2 class="sectionTitle">Business Details</h2>
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="businessName">Business Name</label>
+                    <input class="input-success" type="text" id="businessName" placeholder="Enter Business Name">
+                    <p class="error" id="businessNameError"></p>
+                </div>
+                <div class="userNameContainer emailContainer LoginEmail flex">
+                    <label for="businessType">Business Type</label>
+                    <select class="input-success" id="businessType">
+                        <option value="">Select Business Type</option>
+                        <option value="Education Center">Education Center</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Training Institute">Training Institute</option>
+                        <option value="Consultant">Consultant</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p class="error" id="businessTypeError"></p>
+                </div>
+            </div>
+
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="businessEmail">Business Email</label>
+                    <input class="input-success" type="email" id="businessEmail" placeholder="Enter Business Email">
+                    <p class="error" id="businessEmailError"></p>
+                </div>
+                <div class="emailContainer LoginEmail flex">
+                    <label for="businessPhone">Business Phone</label>
+                    <input class="input-success" type="tel" id="businessPhone" placeholder="Enter Business Phone">
+                    <p class="error" id="businessPhoneError"></p>
+                </div>
+            </div>
+
+            <div class="fullWidthInput LoginEmail flex">
+                <label for="businessAddress">Business Address</label>
+                <textarea class="input-success" id="businessAddress" placeholder="Enter Complete Business Address" rows="3"></textarea>
+                <p class="error" id="businessAddressError"></p>
+            </div>
+
+            <!-- Contact Person Details -->
+            <h2 class="sectionTitle">Contact Person Details</h2>
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="contactName">Full Name</label>
+                    <input class="input-success" type="text" id="contactName" placeholder="Enter Full Name">
+                    <p class="error" id="contactNameError"></p>
+                </div>
+                <div class="emailContainer LoginEmail flex">
+                    <label for="contactPosition">Position</label>
+                    <input class="input-success" type="text" id="contactPosition" placeholder="Enter Position/Designation">
+                    <p class="error" id="contactPositionError"></p>
+                </div>
+            </div>
+
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="contactEmail">Email</label>
+                    <input class="input-success" type="email" id="contactEmail" placeholder="Enter Email">
+                    <p class="error" id="contactEmailError"></p>
+                </div>
+                <div class="emailContainer LoginEmail flex">
+                    <label for="contactPhone">Phone</label>
+                    <input class="input-success" type="tel" id="contactPhone" placeholder="Enter Phone">
+                    <p class="error" id="contactPhoneError"></p>
+                </div>
+            </div>
+
+            <!-- Account Setup -->
+            <h2 class="sectionTitle">Account Setup</h2>
+            <div class="emailUserNameContainer flex">
+                <div class="emailContainer LoginEmail flex">
+                    <label for="password">Password</label>
+                    <input class="input-success" type="password" id="password" placeholder="Enter Password">
+                    <p class="error" id="passwordError"></p>
+                </div>
+                <div class="emailContainer LoginEmail flex">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input class="input-success" type="password" id="confirmPassword" placeholder="Confirm Password">
+                    <p class="error" id="confirmPasswordError"></p>
+                </div>
+            </div>
+
+            <!-- Partnership Interest -->
+            <h2 class="sectionTitle">Partnership Interest</h2>
+            <div class="emailUserNameContainer">
+                <div class="LoginEmail flex">
+                    <label>Interested Areas</label>
+                    <div class="checkboxContainer">
+                        <div class="checkbox flex">
+                            <input type="checkbox" id="civilArchitecture" name="interests" value="Civil/Architecture">
+                            <label for="civilArchitecture">Civil/Architecture</label>
+                        </div>
+                        <div class="checkbox flex">
+                            <input type="checkbox" id="electricalElectronics" name="interests" value="Electrical/Electronics">
+                            <label for="electricalElectronics">Electrical/Electronics</label>
+                        </div>
+                        <div class="checkbox flex">
+                            <input type="checkbox" id="mechanicalAutomobile" name="interests" value="Mechanical/Automobile">
+                            <label for="mechanicalAutomobile">Mechanical/Automobile</label>
+                        </div>
+                        <div class="checkbox flex">
+                            <input type="checkbox" id="csit" name="interests" value="CS/IT">
+                            <label for="csit">CS/IT</label>
+                        </div>
+                        <div class="checkbox flex">
+                            <input type="checkbox" id="onlinePrograms" name="interests" value="Online Programs">
+                            <label for="onlinePrograms">Online Programs</label>
+                        </div>
+                    </div>
+                    <p class="error" id="interestsError"></p>
+                </div>
+            </div>
+
+            <div class="fullWidthInput LoginEmail flex">
+                <label for="additionalInfo">Additional Information</label>
+                <textarea class="input-success" id="additionalInfo" placeholder="Tell us more about your business and partnership goals" rows="4"></textarea>
+            </div>
+
+            <div class="termsContainer flex">
+                <input type="checkbox" id="termsAgree">
+                <label for="termsAgree">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                <p class="error" id="termsError"></p>
+            </div>
+
+            <button type="submit" class="commonBtn partnerBtn">Submit Application</button>
+        </form>
+
+        <div class="line"></div>
+
+        <div class="needSignUpContainer">
+            <p class="needSignUp">Already registered? <a href="partnerLogin.html">LOG IN</a></p>
+        </div>
+        <div class="backToHomeContainer">
+            <p class="backToHome">Back to <a href="index.html">Home Page</a></p>
+        </div>
+    </div>
+    <script src="../../JS/partnerRegisterValidation.js"></script>
+</body>
+</html> 
