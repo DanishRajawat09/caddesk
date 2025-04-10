@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAD DESK Centre - Educational Institute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IT DESK - Professional IT & Programming Training</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- Main Stylesheet -->
@@ -15,6 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Inline style fixes -->
+    <style>
+        .nav-menu, .nav-menu li, .nav-menu li a, .mobile-contact-info {
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -49,6 +54,23 @@
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    
+                    <!-- Mobile Contact Information Sidebar -->
+                    <div class="mobile-contact-info">
+                        <h3>Contact Us</h3>
+                        <a href="tel:+1234567890" class="mobile-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 234 567 890</span>
+                        </a>
+                        <a href="mailto:info@itdesk.com" class="mobile-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@itdesk.com</span>
+                        </a>
+                        <a href="#" class="mobile-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Street, City, Country</span>
+                        </a>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -60,8 +82,8 @@
             <div class="hero-slide active">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>Excellence in Classroom-Based Technical Education</h1>
-                        <p>Unlock your potential with hands-on CAD and IT training programs at our state-of-the-art training centre.</p>
+                        <h1>Professional IT & Programming Training</h1>
+                        <p>Learn from industry experts and start your career in the IT sector with our comprehensive courses.</p>
                         <div class="hero-buttons">
                             <a href="courses.html" class="btn btn-primary">Our Courses</a>
                             <a href="contact.html" class="btn btn-secondary">Visit Centre</a>
@@ -72,8 +94,8 @@
             <div class="hero-slide">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>Industry-Recognized Certifications</h1>
-                        <p>Get certified with our accredited programs and open doors to exciting career opportunities in CAD and IT sectors.</p>
+                        <h1>Get Certified in IT & Programming</h1>
+                        <p>Our certification programs are recognized by top IT companies and can help you land your dream job.</p>
                         <div class="hero-buttons">
                             <a href="courses.html" class="btn btn-primary">Certification Programs</a>
                             <a href="about.html" class="btn btn-secondary">Learn More</a>
@@ -84,8 +106,8 @@
             <div class="hero-slide">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>Expert Faculty & Hands-on Training</h1>
-                        <p>Learn from industry experts and gain practical experience with our state-of-the-art labs and training facilities.</p>
+                        <h1>Modern Facilities & Expert Faculty</h1>
+                        <p>Experience practical learning with our state-of-the-art labs and industry-experienced faculty members.</p>
                         <div class="hero-buttons">
                             <a href="#" class="btn btn-primary">Our Faculty</a>
                             <a href="#" class="btn btn-secondary">Facilities</a>
@@ -109,56 +131,56 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Programs</h2>
-                <p>We offer a wide range of technical courses to prepare you for a successful career</p>
+                <h2>Our Specializations</h2>
+                <p>We offer a wide range of IT and programming training programs to help you become industry-ready professionals</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
-                    <h3>AutoCAD</h3>
-                    <p>Comprehensive training in 2D and 3D design using the industry-standard AutoCAD software.</p>
-                    <a href="courses.html#cad-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <h3>3D Modeling</h3>
-                    <p>Advanced courses in 3D modeling using software like Revit, SolidWorks, and Fusion 360.</p>
-                    <a href="courses.html#3d-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Architectural Design</h3>
-                    <p>Specialized courses in architectural design, drafting, and building information modeling.</p>
-                    <a href="courses.html#architecture-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>IT Courses</h3>
-                    <p>Comprehensive IT training covering programming, networking, and system administration.</p>
+                    <h3>Web Development</h3>
+                    <p>Learn modern web development technologies and frameworks from basics to advanced concepts.</p>
+                    <a href="courses.html#it-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Master in-demand programming languages like Python, Java, JavaScript, PHP and more.</p>
+                    <a href="courses.html#it-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking & Security</h3>
+                    <p>Comprehensive training in network administration and cybersecurity fundamentals.</p>
+                    <a href="courses.html#it-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>Learn database design, SQL, and various database technologies like MySQL, MongoDB and more.</p>
                     <a href="courses.html#it-courses" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Certification Programs</h3>
-                    <p>Industry-recognized certification programs to validate your skills and expertise.</p>
+                    <h3>Certification Courses</h3>
+                    <p>Prepare for industry-recognized certifications with our specialized training programs.</p>
                     <a href="courses.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Career Development</h3>
-                    <p>Career counseling, job placement assistance, and professional development workshops.</p>
+                    <h3>Placement Assistance</h3>
+                    <p>Get career guidance and placement support to help you land your dream job in the IT sector.</p>
                     <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -170,8 +192,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About CAD DESK Centre</h2>
-                    <p>CAD DESK Centre is a premier educational institute specializing in CAD (Computer-Aided Design) and IT training programs. Founded with a vision to bridge the gap between academic learning and industry requirements, we have trained thousands of students who are now successful professionals.</p>
+                    <h2>About IT DESK Centre</h2>
+                    <p>IT DESK Centre is a premier educational institute specializing in information technology and programming training programs. Founded with a vision to bridge the gap between academic learning and industry requirements, we have trained thousands of students who are now successful IT professionals.</p>
                     <p>Our modern facilities, industry-experienced faculty, and practical training approach ensure that our students are well-prepared for the challenges of the professional world.</p>
                     <div class="about-features">
                         <div class="feature">
@@ -194,7 +216,33 @@
                     <a href="about.html" class="btn btn-primary">Learn More About Us</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400" alt="CAD Lab with Students">
+                    <img src="https://via.placeholder.com/600x400" alt="IT Lab with Students">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mission & Vision</h2>
+                <p>Our guiding principles that shape our educational approach</p>
+            </div>
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower students with cutting-edge technical skills and knowledge through quality education, hands-on training, and industry exposure, preparing them for successful careers in the IT sector.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be recognized as the premier institute for IT education, known for excellence in teaching, innovation in curriculum, and producing industry-ready professionals who lead in their chosen fields.</p>
                 </div>
             </div>
         </div>
@@ -240,60 +288,26 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- Counter Section -->
+    <section style="background: #f9f9f9; padding: 80px 0; text-align: center;" class="counter-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Student Testimonials</h2>
-                <p>What our students say about their learning experience</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Enrolling at CAD DESK Centre was one of the best decisions of my career. The practical training and industry exposure helped me secure a job at a top design firm."</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/100x100" alt="John Smith">
-                        </div>
-                        <div class="testimonial-meta">
-                            <h4>John Smith</h4>
-                            <p>CAD Designer, ABC Engineering</p>
-                        </div>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                <div class="counter-item">
+                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 10px; color: #2c3e50;" class="counter-number" data-target="18">0+</div>
+                    <p style="font-size: 18px; color: #7f8c8d;">Years of Excellence</p>
                 </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"The AutoCAD certification course at CAD DESK was comprehensive and well-structured. The faculty was supportive and the hands-on projects prepared me for real-world challenges."</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/100x100" alt="Sarah Johnson">
-                        </div>
-                        <div class="testimonial-meta">
-                            <h4>Sarah Johnson</h4>
-                            <p>Architectural Designer, XYZ Architects</p>
-                        </div>
-                    </div>
+                <div class="counter-item">
+                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 10px; color: #2c3e50;" class="counter-number" data-target="10000">0+</div>
+                    <p style="font-size: 18px; color: #7f8c8d;">Students Trained</p>
                 </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"I completed the 3D modeling course at CAD DESK, and the skills I gained have been invaluable in my career. The institute's placement cell helped me find a great job opportunity."</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/100x100" alt="Michael Brown">
-                        </div>
-                        <div class="testimonial-meta">
-                            <h4>Michael Brown</h4>
-                            <p>3D Visualization Specialist, Global Design</p>
-                        </div>
-                    </div>
+                <div class="counter-item">
+                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 10px; color: #2c3e50;" class="counter-number" data-target="30">0+</div>
+                    <p style="font-size: 18px; color: #7f8c8d;">Courses Offered</p>
                 </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="prev-btn"><i class="fas fa-arrow-left"></i></button>
-                <button class="next-btn"><i class="fas fa-arrow-right"></i></button>
+                <div class="counter-item">
+                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 10px; color: #2c3e50;" class="counter-number" data-target="95">0%</div>
+                    <p style="font-size: 18px; color: #7f8c8d;">Placement Rate</p>
+                </div>
             </div>
         </div>
     </section>
@@ -359,7 +373,15 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2023 CAD DESK Centre. All Rights Reserved.</p>
+                <p>&copy; 2023 IT DESK Institute. All Rights Reserved.</p>
+                <!-- Enhanced Footer Social Links -->
+                <div class="footer-social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </footer>

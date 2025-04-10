@@ -20,21 +20,9 @@ function nextSlide() {
 setInterval(nextSlide, 3000);
 // slider code end
 
-// inquiry panel  start
+// inquiry panel - moved to initInquiryPanel function
 let CancelInquiry = document.querySelector(".inquiryPanelX")
-let InquiryLogo = document.querySelector(".inquiryLogo")
 let sectionInquiry = document.querySelector(".sectionInquiry")
-InquiryLogo.addEventListener("click" , (e) => {
-  sectionInquiry.style.transform = "translate(0%)"
-}
-)
-CancelInquiry.addEventListener("click" , () => {
-    sectionInquiry.style.transform = "translate(-100%)"
-}
-)
-
-// Inquiry panel end
-
 
 // Side Navbar start
 const navBarCancel = document.querySelector(".sideNavBarX")
@@ -66,10 +54,6 @@ const reviewsNextBtn = document.querySelector('.reviews-next');
 const sidebarBtn = document.querySelector('.fa-bars');
 const sidebarPanel = document.querySelector('.sectionSideNavBar');
 const sidebarCloseBtn = document.querySelector('.sideNavBarX');
-
-const inquiryBtn = document.querySelector('.inquiryLogo');
-const inquiryPanel = document.querySelector('.sectionInquiry');
-const inquiryCloseBtn = document.querySelector('.inquiryPanelX');
 
 // Back to top button
 const backToTopBtn = document.querySelector('.backToTop');
@@ -137,48 +121,100 @@ function initSliders() {
     coursesPrevBtn.addEventListener('click', () => scrollCourses('prev'));
     coursesNextBtn.addEventListener('click', () => scrollCourses('next'));
     
-    // Add touch support for mobile
-    let startX, startScrollLeft;
+    // Improved touch support with better handling
+    let startX, startScrollLeft, isDragging = false;
     
     coursesSlider.addEventListener('touchstart', (e) => {
       startX = e.touches[0].pageX;
       startScrollLeft = coursesSlider.scrollLeft;
+      isDragging = true;
     }, { passive: true });
     
     coursesSlider.addEventListener('touchmove', (e) => {
-      if (!startX) return;
+      if (!isDragging) return;
       const x = e.touches[0].pageX;
-      const walk = (startX - x) * 2; // Scroll speed multiplier
+      const walk = (startX - x) * 1.5; // Adjust scroll speed for better mobile feel
       coursesSlider.scrollLeft = startScrollLeft + walk;
-    }, { passive: true });
+      
+      // Prevent page scrolling when slider is being swiped
+      if (Math.abs(walk) > 10) {
+        e.preventDefault();
+      }
+    }, { passive: false });
     
     coursesSlider.addEventListener('touchend', () => {
-      startX = null;
+      isDragging = false;
+    });
+    
+    // Add mouse support for desktop drag
+    coursesSlider.addEventListener('mousedown', (e) => {
+      startX = e.pageX;
+      startScrollLeft = coursesSlider.scrollLeft;
+      isDragging = true;
+      coursesSlider.style.cursor = 'grabbing';
+    });
+    
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX;
+      const walk = (startX - x) * 1.5;
+      coursesSlider.scrollLeft = startScrollLeft + walk;
+    });
+    
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      coursesSlider.style.cursor = 'grab';
     });
   }
 
-  // Reviews slider navigation
+  // Reviews slider - similar improvements
   if (reviewsPrevBtn && reviewsNextBtn && reviewsSlider) {
     reviewsPrevBtn.addEventListener('click', () => scrollReviews('prev'));
     reviewsNextBtn.addEventListener('click', () => scrollReviews('next'));
     
-    // Add touch support for mobile
-    let startX, startScrollLeft;
+    let startX, startScrollLeft, isDragging = false;
     
     reviewsSlider.addEventListener('touchstart', (e) => {
       startX = e.touches[0].pageX;
       startScrollLeft = reviewsSlider.scrollLeft;
+      isDragging = true;
     }, { passive: true });
     
     reviewsSlider.addEventListener('touchmove', (e) => {
-      if (!startX) return;
+      if (!isDragging) return;
       const x = e.touches[0].pageX;
-      const walk = (startX - x) * 2; // Scroll speed multiplier
+      const walk = (startX - x) * 1.5;
       reviewsSlider.scrollLeft = startScrollLeft + walk;
-    }, { passive: true });
+      
+      if (Math.abs(walk) > 10) {
+        e.preventDefault();
+      }
+    }, { passive: false });
     
     reviewsSlider.addEventListener('touchend', () => {
-      startX = null;
+      isDragging = false;
+    });
+    
+    // Add mouse support for desktop drag
+    reviewsSlider.addEventListener('mousedown', (e) => {
+      startX = e.pageX;
+      startScrollLeft = reviewsSlider.scrollLeft;
+      isDragging = true;
+      reviewsSlider.style.cursor = 'grabbing';
+    });
+    
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX;
+      const walk = (startX - x) * 1.5;
+      reviewsSlider.scrollLeft = startScrollLeft + walk;
+    });
+    
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      reviewsSlider.style.cursor = 'grab';
     });
   }
 }
@@ -239,13 +275,60 @@ function initSidebar() {
 
 // Inquiry panel toggle functionality
 function initInquiryPanel() {
-  if (inquiryBtn && inquiryPanel && inquiryCloseBtn) {
-    inquiryBtn.addEventListener('click', () => {
-      inquiryPanel.style.transform = 'translateX(0)';
-    });
+  const inquiryNavLink = document.querySelector('#inquiryNavLink');
+  const inquirySideLink = document.querySelector('#inquirySideLink');
+  const inquiryPanel = document.querySelector('.sectionInquiry');
+  const inquiryCloseBtn = document.querySelector('.inquiryPanelX');
+  
+  if (inquiryPanel && inquiryCloseBtn) {
+    // Main navbar inquiry link
+    if (inquiryNavLink) {
+      inquiryNavLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Check window width to determine appropriate transform
+        if (window.innerWidth < 768) {
+          inquiryPanel.style.transform = 'translate(0%)';
+        } else {
+          inquiryPanel.style.transform = 'translateX(0)';
+        }
+      });
+    }
+    
+    // Side navbar inquiry link
+    if (inquirySideLink) {
+      inquirySideLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Check window width to determine appropriate transform
+        if (window.innerWidth < 768) {
+          inquiryPanel.style.transform = 'translate(0%)';
+        } else {
+          inquiryPanel.style.transform = 'translateX(0)';
+        }
+        
+        // Close side navbar when clicking inquiry link
+        if (sidebarPanel) {
+          sidebarPanel.style.transform = 'translateX(-100%)';
+        }
+      });
+    }
 
     inquiryCloseBtn.addEventListener('click', () => {
-      inquiryPanel.style.transform = 'translateX(-200%)';
+      // Check window width to determine appropriate transform
+      if (window.innerWidth < 768) {
+        inquiryPanel.style.transform = 'translate(-100%)';
+      } else {
+        inquiryPanel.style.transform = 'translateX(-200%)';
+      }
+    });
+    
+    // Handle orientation change and resize events
+    window.addEventListener('resize', () => {
+      // Reset transform to avoid display issues on device rotation or resize
+      if (window.innerWidth < 768) {
+        inquiryPanel.style.transform = 'translate(-100%)';
+      } else {
+        inquiryPanel.style.transform = 'translateX(-200%)';
+      }
     });
   }
 }
@@ -297,6 +380,67 @@ function initFAQ() {
   }
 }
 
+// Handle viewport size changes
+function handleViewportChanges() {
+  const viewportHandler = () => {
+    // Adjust elements based on current viewport size
+    if (sidebarPanel) {
+      if (window.innerWidth >= 992) {
+        sidebarPanel.style.transform = 'translateX(-100%)';
+      }
+    }
+    
+    // Adjust slider display based on viewport
+    if (coursesSlider) {
+      const cards = coursesSlider.querySelectorAll('.coursesCard');
+      if (cards.length > 0) {
+        if (window.innerWidth <= 576) {
+          cards.forEach(card => {
+            card.style.minWidth = 'calc(100% - 20px)';
+          });
+        } else if (window.innerWidth <= 768) {
+          cards.forEach(card => {
+            card.style.minWidth = 'calc(80% - 20px)';
+          });
+        } else {
+          cards.forEach(card => {
+            card.style.minWidth = '280px';
+          });
+        }
+      }
+    }
+    
+    if (reviewsSlider) {
+      const cards = reviewsSlider.querySelectorAll('.reviewCard');
+      if (cards.length > 0) {
+        if (window.innerWidth <= 576) {
+          cards.forEach(card => {
+            card.style.minWidth = 'calc(100% - 20px)';
+          });
+        } else if (window.innerWidth <= 768) {
+          cards.forEach(card => {
+            card.style.minWidth = 'calc(80% - 20px)';
+          });
+        } else {
+          cards.forEach(card => {
+            card.style.minWidth = '350px';
+          });
+        }
+      }
+    }
+  };
+  
+  // Run on page load
+  viewportHandler();
+  
+  // Throttled resize handler
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(viewportHandler, 100);
+  });
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   initSliders();
@@ -304,5 +448,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initInquiryPanel();
   initBackToTop();
   initFAQ();
+  handleViewportChanges();
 });
 
